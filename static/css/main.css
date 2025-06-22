@@ -30,3 +30,47 @@ form {
     margin-top: 20px;
     display: inline-block;
 }
+
+#flash-container {
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 500px;
+}
+
+
+.flash-message.success {
+    background-color: rgb(66, 182, 66);
+    color: white;
+    padding: 10px;
+}
+
+.flash-message.error {
+    background-color: rgb(224, 72, 12);
+    color: white;
+    padding: 10px;
+}
+
+.flash-message {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.5s forwards, fadeOut 3.5s 2s forwards;
+    color: white;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
