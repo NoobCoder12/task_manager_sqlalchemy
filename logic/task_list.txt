@@ -1,1 +1,3 @@
-Dupaaa|False
+asdas|True
+dfgd|False
+dfgdf|True

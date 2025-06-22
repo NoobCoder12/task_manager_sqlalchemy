@@ -29,7 +29,7 @@ def update_task(task_name):
     manager.complete_task(task_name)
     return redirect('/')
 
-@app.route('/save/')
+@app.route('/save/', methods=['GET', 'POST'])
 def save_list():
     manager.save_list()
     return redirect('/')
